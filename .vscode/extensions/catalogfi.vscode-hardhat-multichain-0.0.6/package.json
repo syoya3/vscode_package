@@ -1,0 +1,65 @@
+{
+	"publisher": "catalogfi",
+	"name": "vscode-hardhat-multichain",
+	"displayName": "HardHat MultiChain",
+	"description": "Setup multichain environment in a hardhat project.",
+	"version": "0.0.6",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"author": {
+		"name": "Reetik Rajan",
+		"email": "r4reetik@catalog.fi"
+	},
+	"icon": "asset/image/icon.png",
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:catalog-hardhat-multichain.setupNetworks"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "catalog-hardhat-multichain.setupNetworks",
+				"title": "Setup HardHat MultiChain Networks"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.74.0",
+		"@types/glob": "^8.0.0",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "16.x",
+		"@typescript-eslint/eslint-plugin": "^5.45.0",
+		"@typescript-eslint/parser": "^5.45.0",
+		"eslint": "^8.28.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.1.0",
+		"typescript": "^4.9.3",
+		"@vscode/test-electron": "^2.2.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/catalogfi/vscode-hardhat-multichain.git"
+	},
+	"__metadata": {
+		"id": "917df9b8-0f00-40e6-bf48-57d3b42cc4bc",
+		"publisherId": "379ec720-7dc8-4925-9b88-06b95ba9c30f",
+		"publisherDisplayName": "Catalog",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1691488219978,
+		"preRelease": false
+	}
+}
